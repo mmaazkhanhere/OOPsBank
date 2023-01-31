@@ -1,4 +1,4 @@
-import { bankAccount } from "./bankAccountInterface.js";
+import { bankAccountInterface } from "./bankAccountInterface.js";
 
 export class Customer{
 

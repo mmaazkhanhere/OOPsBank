@@ -1,11 +1,11 @@
-import {bankAccount} from "./bankAccountInterface.js";
+import {bankAccountInterface} from "./bankAccountInterface.js";
 
-class bankAccount implements bankAccount{
-
-    public accountBalance:number;
+export class bankAccount implements bankAccountInterface{
     
-    constructor(){
-        this.accountBalance=100
+    public accountBalance=1000;
+
+    constructor(public amount:number){
+        this.amount=amount;
     }
 
     debit(amount:number):string{

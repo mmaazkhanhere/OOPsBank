@@ -1,7 +1,9 @@
-class bankAccount {
-    accountBalance;
-    constructor() {
-        this.accountBalance = 100;
+export class bankAccount {
+    amount;
+    accountBalance = 1000;
+    constructor(amount) {
+        this.amount = amount;
+        this.amount = amount;
     }
     debit(amount) {
         let statement = 'Sorry, you have insufficient balance!';
@@ -29,4 +31,3 @@ class bankAccount {
         return statement;
     }
 }
-export {};

@@ -4,6 +4,7 @@ import inquirer from "inquirer"
 import chalk from "chalk"
 import chalkAnimation from "chalk-animation"
 import { Customer } from "./customerClass.js"
+import { bankAccount } from "./bankAccount.js"
 
 async function Bank(){
     let getData= await inquirer.prompt([{
@@ -27,9 +28,17 @@ async function Bank(){
         name:'phoneNumber',
         type:'input',
         message:'Enter your phone number: '
+    },{
+        name:'amount',
+        type:'input',
+        message:'Enter amount to debit: '
     }])
 
-    let newCustomer= new Customer(getData.firstName,getData.lastName,getData.gender,getData.age,getData.phoneNumber)
+    let newCustomer= new Customer(getData.firstName,getData.lastName,getData.gender,getData.age,getData.phoneNumber,)
     console.log(newCustomer)
-}
 
+    let newAccount=new bankAccount(getData.amount)
+    console.log(newAccount)
+    console.log(newAccount.debit(getData.amount))
+}
+Bank();
