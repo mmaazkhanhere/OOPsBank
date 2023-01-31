@@ -1,11 +1,10 @@
-import { bankAccount} from "./bankAccountInterface.js";
+import {bankAccount} from "./bankAccountInterface.js";
 
 class bankAccount implements bankAccount{
-    public accountBalance:number= {set,get}
-    
-    constructor(){}
 
-    bankAccount(){
+    public accountBalance:number;
+    
+    constructor(){
         this.accountBalance=100
     }
 

@@ -1,7 +1,6 @@
 class bankAccount {
-    accountBalance = { set, get };
-    constructor() { }
-    bankAccount() {
+    accountBalance;
+    constructor() {
         this.accountBalance = 100;
     }
     debit(amount) {

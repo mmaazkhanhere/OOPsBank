@@ -2,25 +2,28 @@ import { bankAccount } from "./bankAccountInterface.js";
 
 export class Customer{
 
-    public firstName:string={get,set}
-    public lastName:string={get,set}
-    public gender:string={get,set};
-    public age:number={get,set};
-    public mobileNumber:number={set,get};
+    // public firstName:string;
+    // public lastName:string;
+    // public gender:string;
+    // public age:number;
+    // public mobileNumber:number;
 
-    public bankAcc:bankAccount={set,get};
-
-    constructor(){}
+    constructor(public firstName:string,
+        public lastName:string,
+        public gender:string,
+        public age:number,
+        public mobileNumber:number){
+            this.firstName=firstName;
+            this.lastName=lastName;
+            this.gender=gender;
+            this.age=age;
+            this.mobileNumber=mobileNumber;
+        }
 
     customerInfo():string{
         return `Name: ${this.firstName} ${this.lastName}
 Age: ${this.age}
 Gender: ${this.gender}
-Mobile: ${this.mobileNumber}
-Account Balance: ${this.bankAcc.accountBalance}   `
+Mobile: ${this.mobileNumber}   `
     }
-    
-    // constructor(){
-        
-    // }
 }

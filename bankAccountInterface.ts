@@ -1,4 +1,5 @@
 export interface bankAccount{
-    debit(d:number):string;
-    credit(d:number):string;
+    accountBalance:number;
+    debit(amount:number):string;
+    credit(amount:number):string;
 }
