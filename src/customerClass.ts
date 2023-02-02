@@ -1,12 +1,6 @@
-import { bankAccountInterface } from "./bankAccountInterface.js";
 
 export class Customer{
-
-    // public firstName:string;
-    // public lastName:string;
-    // public gender:string;
-    // public age:number;
-    // public mobileNumber:number;
+    //a class that stores the customer information
 
     constructor(public firstName:string,
         public lastName:string,
@@ -19,8 +13,9 @@ export class Customer{
             this.age=age;
             this.mobileNumber=mobileNumber;
         }
-
-    customerInfo():string{
+        //a constructor that will take name, age, gender, and phone number of the user
+    
+        customerInfo():string{ // a function that returns the customer information
         return `Name: ${this.firstName} ${this.lastName}
 Age: ${this.age}
 Gender: ${this.gender}

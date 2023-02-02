@@ -3,10 +3,12 @@
 import inquirer from "inquirer"
 import chalk from "chalk"
 import chalkAnimation from "chalk-animation"
-import { Customer } from "./customerClass.js"
+import { Customer } from "./customerClass.js" //importing classes that is to be used
 import { bankAccount } from "./bankAccount.js"
 
 async function Bank(){
+    //main function that will get data from the user
+
     let getData= await inquirer.prompt([{
         name:'firstName',
         type:'input',
@@ -35,10 +37,12 @@ async function Bank(){
     }])
 
     let newCustomer= new Customer(getData.firstName,getData.lastName,getData.gender,getData.age,getData.phoneNumber,)
-    console.log(newCustomer)
+    //a new customer object is created with personal information of the customer is passed
+    console.log(newCustomer) //displaying the customer information
 
     let newAccount=new bankAccount(getData.amount)
-    console.log(newAccount)
-    console.log(newAccount.debit(getData.amount))
+    //a new new account is created to which amount to debit is passed  
+    console.log(newAccount) //displaying the total balance and debit amount of the user
+    console.log(newAccount.debit(getData.amount)) //debit function of the class is called to debit amount from the user
 }
-Bank();
+Bank(); //calling the function
